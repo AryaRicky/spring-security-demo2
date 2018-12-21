@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.scdemo2.dao.UserMapper">
+
+<select id="findByUserName" resultType="sysUser" parameterType="String">
+		select u.* from sys_user u where username= #{username}
+	</select>
+
+</mapper>
