@@ -18,6 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()  //定义哪些url需要保护，哪些url不需要保护
                 .antMatchers("/", "/index/").permitAll()    //定义不需要认证就可以访问
+                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

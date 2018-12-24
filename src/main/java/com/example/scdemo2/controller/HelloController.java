@@ -27,4 +27,9 @@ public class HelloController {
     public String role() {
         return "role";
     }
+
+    @RequestMapping("/admin")
+    public String admin() {
+        return "admin/admin";
+    }
 }
